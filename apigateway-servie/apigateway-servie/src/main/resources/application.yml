@@ -3,7 +3,9 @@ server:
 
 eureka:
   client:
+    # 나자신은 등록여부
     register-with-eureka: true
+    # 마이크로 서비스 인스턴스 목록을 로컬에 캐시할 것인지의 여부
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
@@ -12,7 +14,7 @@ eureka:
 
 spring:
   application:
-    name: apigateway-service
+    name: gateway-service
   cloud:
     gateway:
       default-filters:
